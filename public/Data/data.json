@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "nombre": "Gandalf",
+    "descripcion": "Amigurumi del mago más sabio, con su sombrero y bastón tejidos a mano.",
+    "precio": 4200,
+    "imagen": "https://i.ibb.co/8D9PThBN/2.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Capitán América",
+    "descripcion": "Mini héroe con escudo incluido, tejido con mucho amor y lana azul.",
+    "precio": 4500,
+    "imagen": "https://i.ibb.co/8LxTXTR8/10.png"
+  },
+  {
+    "id": 3,
+    "nombre": "John Wick",
+    "descripcion": "Amigurumi del temido asesino con traje negro y mirada tierna.",
+    "precio": 4700,
+    "imagen": "https://i.ibb.co/FbGCyyv3/1.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Harry Potter",
+    "descripcion": "Con su bufanda, lentes y varita tejida. ¡Magia en cada punto!",
+    "precio": 4400,
+    "imagen": "https://i.ibb.co/KxRwNngH/4.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Wall-E",
+    "descripcion": "Robocito curioso hecho con hilo y ternura.",
+    "precio": 3900,
+    "imagen": "https://i.ibb.co/VcKfnJRk/9.png"
+  },
+  {
+    "id": 6,
+    "nombre": "Russell",
+    "descripcion": "El explorador de 'Up' en versión crochet, con todos sus detalles.",
+    "precio": 4000,
+    "imagen": "https://i.ibb.co/Tx6DBcj0/8.png"
+  },
+  {
+    "id": 7,
+    "nombre": "Sonic",
+    "descripcion": "Rápido y suave, ideal para fans del erizo azul.",
+    "precio": 4300,
+    "imagen": "https://i.ibb.co/Y7gYyF6T/7.png"
+  },
+  {
+    "id": 8,
+    "nombre": "Van Gogh",
+    "descripcion": "El pintor de los girasoles en formato lanudo.",
+    "precio": 4100,
+    "imagen": "https://i.ibb.co/zHLpWktV/6.png"
+  },
+  {
+    "id": 9,
+    "nombre": "Messi",
+    "descripcion": "La pulga en versión adorable, con camiseta argentina tejida.",
+    "precio": 4600,
+    "imagen": "https://i.ibb.co/ymtjgNXF/5.png"
+  },
+  {
+    "id": 10,
+    "nombre": "Demogorgon",
+    "descripcion": "Criatura misteriosa, oscura pero tierna al tacto.",
+    "precio": 4800,
+    "imagen": "https://i.ibb.co/LXj5XXR0/3.png"
+  }
+]
