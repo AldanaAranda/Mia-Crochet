@@ -51,3 +51,9 @@ Todos los productos se obtienen y actualizan desde mockAPI
 ## ❤️ Autoría
 
 Este proyecto fue realizado con dedicación por [Aldana Aranda](https://github.com/AldanaAranda) como entrega final para el curso de desarrollo web con React. Cada línea fue pensada para ser clara, modular, accesible y amigable para el usuario final.
+
+---
+
+## 🚀 Cómo Visualizar el Proyecto
+
+Puedes acceder al proyecto directamente desde <a href="https://mia-crocheet.netlify.app/" target="_blank">este enlace</a>. 
