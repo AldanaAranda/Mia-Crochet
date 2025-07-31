@@ -9,7 +9,7 @@ const Contacto = () => {
         gap: '1rem'
     }
     return (
-        <div>
+        <div style={{margin: '4rem 0'}}>
             <h2>¿Listo para un Amigurumi Único? ¡Pide el Tuyo!</h2>
             <form action="https://formspree.io/f/xdkozrkw" method="POST" style={estiloForm}>
                 <label htmlFor="nombre">Nombre Completo</label>
@@ -36,7 +36,7 @@ const Contacto = () => {
                     placeholder="Escribe tus comentarios o peticiones"
                 ></textarea>
 
-                <button type="submit" style={{backgroundColor: 'pink'}}>
+                <button type="submit" style={{backgroundColor: '#365b6d', color: '#ffff'}}>
                     Enviar
                 </button>
             </form>

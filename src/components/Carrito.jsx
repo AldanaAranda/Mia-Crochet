@@ -1,26 +1,43 @@
 import React from 'react'
+import { useCarrito } from '../context/CarritoContext'
+import { useAuth } from '../context/AuthContext'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { editarProducto } from '../api'
+import { useProductos } from '../context/ProductosContext'
 
-const Carrito = ({ carrito, setCarrito }) => {
+const Carrito = () => {
     const calcularTotal = () => carrito.reduce((total, producto) => total + producto.precio * producto.cantidad, 0)
 
-    const ajustarCantidad = (id, cambio) => {
-        const nuevoCarrito = carrito.map(producto => {
-            if (producto.id === id) {
-                const nuevaCantidad = producto.cantidad + cambio
-                if (nuevaCantidad > 0) {
-                    return { ...producto, cantidad: nuevaCantidad }
-                }
-                return null
+    const { carrito, setCarrito, ajustarCantidad, eliminarProducto } = useCarrito()
+    const { cargarProductos } = useProductos()
+    const { usuario } = useAuth()
+    const navigate = useNavigate()
+
+    const handleCompra = async () => {
+        const offcanvasElement = document.getElementById('offcanvasRight')
+        const offcanvasInstance = window.bootstrap?.Offcanvas.getInstance(offcanvasElement)
+        offcanvasInstance?.hide()
+
+        if (!usuario) {
+            navigate('/login')
+            return
+        }
+
+        try {
+            for (const producto of carrito) {
+                const nuevoStock = producto.stock - producto.cantidad
+                await editarProducto(producto.id, {...producto, stock: nuevoStock})
             }
-            return producto
-        }).filter(Boolean)
-        setCarrito(nuevoCarrito)
+
+            await cargarProductos()
+            setCarrito([])
+            toast.success("Compra realizada con éxito 🛒")
+        } catch (error) {
+            toast.error("Error al procesar la compra")
+        }
     }
 
-    const eliminarProducto = (id) => {
-        const nuevoCarrito = carrito.filter(producto => producto.id !== id)
-        setCarrito(nuevoCarrito)
-    }
 
     return (
         <div
@@ -63,6 +80,12 @@ const Carrito = ({ carrito, setCarrito }) => {
                     ))}
                 </ul>
             </div>
+
+            {carrito.length > 0 && (
+                <div className="text-center mb-3">
+                    <button className="btn btn-success" onClick={handleCompra}>Comprar</button>
+                </div>
+            )}
 
             <div className="total-carrito ms-3 mb-3">
                 <h5>Total: ${calcularTotal().toLocaleString('es-AR')}</h5>

@@ -1,17 +1,22 @@
 # 🧶 Mia Crochet - E-commerce de Amigurumis
 
-**Mia Crochet** es un proyecto de e-commerce desarrollado con React. El objetivo es ofrecer una tienda virtual de amigurumis, con un carrito de compras funcional, rutas protegidas, y una conexión a una fuente externa de productos.
+**Mia Crochet** es un proyecto de e-commerce desarrollado con **React**. El objetivo es ofrecer una tienda virtual de amigurumis hecha con amor, con carrito de compras funcional, autenticación de usuarios, administración de productos desde MockAPI, y una interfaz responsiva optimizada.
 
 ---
 
 ## 🚀 Funcionalidades principales
 
-- ✅ Visualización de productos desde una fuente externa (`data.json`)
-- ✅ Carrito de compras con aumento/disminución de cantidades y eliminación
-- ✅ Interfaz responsiva con Bootstrap y componentes reutilizables
-- ✅ Navegación mediante React Router DOM
-- ✅ Rutas protegidas con sistema de login
-- ✅ Rutas dinámicas para ver detalles de cada producto
+- ✅ **Visualización y filtrado de productos** desde **MockAPI**
+- ✅ **Carrito de compras** con aumento/disminución de cantidades, validación de stock y eliminación
+- ✅ **Autenticación de usuarios** con rutas protegidas (`AuthContext`)
+- ✅ **CRUD completo** de productos para el administrador: agregar, editar y eliminar
+- ✅ **Interfaz responsiva** con Bootstrap y `styled-components`
+- ✅ **Notificaciones** visuales con `React Toastify`
+- ✅ **Íconos interactivos** con FontAwesome
+- ✅ **Paginación y búsqueda** de productos en tiempo real
+- ✅ **SEO básico** con `React Helmet` (`<title>` y `<meta>`)
+- ✅ **Control de stock** en tiempo real al comprar
+- ✅ Código organizado en **componentes reutilizables** y **contexts globales**
 
 ---
 
@@ -25,19 +30,24 @@
 
 ## 🔐 Acceso al panel admin
 
-- Usuario: `admin`
+- Usuario: `admin`  
 - Contraseña: `1234`
 
-El panel `/admin` es privado y se accede únicamente si se inicia sesión correctamente. Usa rutas protegidas mediante contexto (`AuthContext`).
+El panel `/admin` es privado. Solo puede accederse tras iniciar sesión. Las rutas están protegidas mediante `RutaProtegida` y contexto de autenticación.
+
+También podés iniciar sesión como usuario común:
+
+- Usuario: `usuario`  
+- Contraseña: `abcd`
 
 ---
 
-## 📁 Fuente de datos
+## 🧾 MockAPI utilizada
 
-Los productos se obtienen desde un archivo `data.json` ubicado en la carpeta `Data/`.
+Todos los productos se obtienen y actualizan desde mockAPI
 
 ---
 
 ## ❤️ Autoría
 
-Este proyecto fue realizado con amor por [Aldana Aranda](https://github.com/AldanaAranda) como parte de una pre-entrega académica. Cada componente fue pensado para ser funcional, claro y visualmente amigable.
+Este proyecto fue realizado con dedicación por [Aldana Aranda](https://github.com/AldanaAranda) como entrega final para el curso de desarrollo web con React. Cada línea fue pensada para ser clara, modular, accesible y amigable para el usuario final.
